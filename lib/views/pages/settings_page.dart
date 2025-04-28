@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutters/views/pages/api_page.dart';
+import 'package:flutters/views/pages/expanded_flexible_page.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key, required this.title});
@@ -99,6 +101,17 @@ class _SettingsPage extends State<SettingsPage> {
                   backgroundColor: Colors.red,
                   foregroundColor: Colors.blue,
                 ),
+              ),ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return ExpandedFlexiblePage();
+                  },));
+                },
+                child: Text("show expanded and flexible page"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  foregroundColor: Colors.blue,
+                ),
               ),
               TextButton(
                 onPressed: () {
@@ -115,6 +128,11 @@ class _SettingsPage extends State<SettingsPage> {
                 child: Text("snack baar"),
               ),
               OutlinedButton(onPressed: () {}, child: Text("wassup")),
+              OutlinedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ApiPage();
+                },));
+              }, child: Text("wassup")),
               Divider(height: 10, color: Colors.greenAccent,thickness: 5,endIndent: 50,),
               OutlinedButton(
                 onPressed: () {

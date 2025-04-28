@@ -15,6 +15,10 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Padding(padding: EdgeInsets.all(20.0),
     child: Column(children: [
+      CircleAvatar(
+        radius: 70,
+        backgroundImage: AssetImage('assets/images/hey.jpg'),
+      ),
       ListTile(title: Text("log out"),
         onTap: () {
         selectedPageNotifier.value=0;
